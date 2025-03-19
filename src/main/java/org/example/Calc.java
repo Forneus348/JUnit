@@ -23,6 +23,8 @@ public class Calc {
 
     public double divide(){
         try {
+            if (this.number1 < 0 &&  this.number2 == 0) return Double.NEGATIVE_INFINITY;
+            if (this.number1 > 0 &&  this.number2 == 0) return Double.POSITIVE_INFINITY;
             return this.number1 / this.number2;
         }
         catch (ArithmeticException ex) {
