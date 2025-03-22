@@ -51,4 +51,11 @@ public class CalcTest {
         Assertions.assertEquals(Double.NEGATIVE_INFINITY, new Calc(-2, 0).divide());
         Assertions.assertEquals(1, new Calc(-2, -2).divide());
     }
+
+    @Test
+    @DisplayName("Проверка деления нуля на ноль")
+    void testDivideZeroByZero() {
+        Assertions.assertEquals(Double.NaN, new Calc(0, 0).divide());
+    }
+
 }
